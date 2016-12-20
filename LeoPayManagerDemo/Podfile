@@ -1,0 +1,4 @@
+
+target 'LeoPayManagerDemo' do
+    pod 'LeoPayManager'
+end

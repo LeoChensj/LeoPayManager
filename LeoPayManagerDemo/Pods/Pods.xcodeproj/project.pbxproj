@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27340B2299111E1BA71E46AEC36B2B1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		482ADEF74BA1A8E0A390210F1B21752C /* LeoPayManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51188733072D84118B752BEE7068BEC3 /* LeoPayManager-dummy.m */; };
+		563FC81DE66E84FBFADD5D3FE9453A00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9962FCF63ED84DA37D8A989F1C736A42 /* LeoPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8FC886A2CEE6571E0BC08790E0503B /* LeoPayManager.m */; };
+		A061444C66756B5A2E543610089DFB62 /* LeoPayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7149CC2CA746BD90CE7FC2586825FC8A /* LeoPayManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4FF5DEF7FAD55078A9FFE9B4B7E89F4 /* Pods-LeoPayManagerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 856187269B0FCE7F88DC87E207AAE802 /* Pods-LeoPayManagerDemo-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B3ECAF7205CAA67AA4E8FF34FE2951F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB5B6F921C52D73C2FC29FF25C0F4B75;
+			remoteInfo = LeoPayManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		068A162BC5152616F50F87C61FDF55DE /* Pods-LeoPayManagerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LeoPayManagerDemo-frameworks.sh"; sourceTree = "<group>"; };
+		0F7258C10FE7E0BE32C5BB1110CDE9AD /* Pods-LeoPayManagerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeoPayManagerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		1C72E3657039FB2F57AB91508AD81455 /* AlipaySDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = Alipay/AlipaySDK.bundle; sourceTree = "<group>"; };
+		1F49B0B5B64D09830E6B432A65E4563A /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK/WXApi.h; sourceTree = "<group>"; };
+		29184F701BC299CABB3A4BF293757950 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK/libWeChatSDK.a; sourceTree = "<group>"; };
+		313C6D36EE1464D3372A2C4C5E955E59 /* LeoPayManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LeoPayManager-prefix.pch"; sourceTree = "<group>"; };
+		3334B5FB86FE5A02AA8B2A913197A13E /* Pods-LeoPayManagerDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LeoPayManagerDemo-resources.sh"; sourceTree = "<group>"; };
+		39889BA8554C5F3258D3EB76FB3AA52A /* libPods-LeoPayManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LeoPayManagerDemo.a"; path = "libPods-LeoPayManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA457DE434D6601DA1328F1069A7F6A /* LeoPayManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeoPayManager.xcconfig; sourceTree = "<group>"; };
+		4AAC2BAB798495ABF39E93544A011BF2 /* Pods-LeoPayManagerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LeoPayManagerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4EC7FDD441BBC9A00F7794E895259616 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK/WechatAuthSDK.h; sourceTree = "<group>"; };
+		51188733072D84118B752BEE7068BEC3 /* LeoPayManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LeoPayManager-dummy.m"; sourceTree = "<group>"; };
+		6F8FC886A2CEE6571E0BC08790E0503B /* LeoPayManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LeoPayManager.m; path = LeoPayManager/LeoPayManager.m; sourceTree = "<group>"; };
+		7149CC2CA746BD90CE7FC2586825FC8A /* LeoPayManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LeoPayManager.h; path = LeoPayManager/LeoPayManager.h; sourceTree = "<group>"; };
+		83419E5CC6AEEA43013F381ED0FCC8AC /* UPPaymentControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPPaymentControl.h; path = UnionPay/UPPaymentControl.h; sourceTree = "<group>"; };
+		856187269B0FCE7F88DC87E207AAE802 /* Pods-LeoPayManagerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LeoPayManagerDemo-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC35CC4103AF1192110113B17E5071C3 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = Alipay/AlipaySDK.framework; sourceTree = "<group>"; };
+		BD4EBCC47289E0A3A573B5CAD9A40FE6 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK/WXApiObject.h; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D3647622E75CC8AD5418F97F0CD09B1A /* Pods-LeoPayManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeoPayManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D90D6E1295A516EDF7C1C628DE00B464 /* libPaymentControl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libPaymentControl.a; path = UnionPay/libPaymentControl.a; sourceTree = "<group>"; };
+		DEEE5C4350E3B8926F882626B9F5D99C /* libLeoPayManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLeoPayManager.a; path = libLeoPayManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04A14129429288F359EA171B7C9DA48 /* Pods-LeoPayManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeoPayManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11ACBA8E2995777F368026727FE9CA19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				563FC81DE66E84FBFADD5D3FE9453A00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC3019E473BB74C6C46BB4E144EB1151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27340B2299111E1BA71E46AEC36B2B1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		161B5CDE26FC38E4A2977CD2575A0670 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E0709E474899EA74C0CF931BF1BAF9D /* Pods-LeoPayManagerDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2714AA7956C7674C6D7DFF33FE929686 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C72E3657039FB2F57AB91508AD81455 /* AlipaySDK.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		33258DDDB5DBA30AB00040A02AE73F9B /* Alipay_SDK_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F5736DE2A666EB662C70657F62C380FD /* Frameworks */,
+				2714AA7956C7674C6D7DFF33FE929686 /* Resources */,
+			);
+			name = Alipay_SDK_iOS;
+			path = Alipay_SDK_iOS;
+			sourceTree = "<group>";
+		};
+		476065306306AF11D2180A8459691360 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DA457DE434D6601DA1328F1069A7F6A /* LeoPayManager.xcconfig */,
+				51188733072D84118B752BEE7068BEC3 /* LeoPayManager-dummy.m */,
+				313C6D36EE1464D3372A2C4C5E955E59 /* LeoPayManager-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LeoPayManager";
+			sourceTree = "<group>";
+		};
+		4E0709E474899EA74C0CF931BF1BAF9D /* Pods-LeoPayManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4AAC2BAB798495ABF39E93544A011BF2 /* Pods-LeoPayManagerDemo-acknowledgements.markdown */,
+				0F7258C10FE7E0BE32C5BB1110CDE9AD /* Pods-LeoPayManagerDemo-acknowledgements.plist */,
+				856187269B0FCE7F88DC87E207AAE802 /* Pods-LeoPayManagerDemo-dummy.m */,
+				068A162BC5152616F50F87C61FDF55DE /* Pods-LeoPayManagerDemo-frameworks.sh */,
+				3334B5FB86FE5A02AA8B2A913197A13E /* Pods-LeoPayManagerDemo-resources.sh */,
+				E04A14129429288F359EA171B7C9DA48 /* Pods-LeoPayManagerDemo.debug.xcconfig */,
+				D3647622E75CC8AD5418F97F0CD09B1A /* Pods-LeoPayManagerDemo.release.xcconfig */,
+			);
+			name = "Pods-LeoPayManagerDemo";
+			path = "Target Support Files/Pods-LeoPayManagerDemo";
+			sourceTree = "<group>";
+		};
+		61DB4169DC4E5443E71B35893C2241E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D90D6E1295A516EDF7C1C628DE00B464 /* libPaymentControl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66B004E287276B485EA13A1CF6CA4C14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33258DDDB5DBA30AB00040A02AE73F9B /* Alipay_SDK_iOS */,
+				E6FCF2C8A52CA6AD5330CBFBAA7B20EE /* LeoPayManager */,
+				E78E4FA918D5EC4B5527AE4EB8412862 /* UnionPay_SDK_iOS */,
+				AC5FD1CB3780376006FCBF88D5B2352D /* WeChat_SDK_iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				66B004E287276B485EA13A1CF6CA4C14 /* Pods */,
+				C5BD2A350C350E0D02E53D42E6DAB270 /* Products */,
+				161B5CDE26FC38E4A2977CD2575A0670 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AC5FD1CB3780376006FCBF88D5B2352D /* WeChat_SDK_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4EC7FDD441BBC9A00F7794E895259616 /* WechatAuthSDK.h */,
+				1F49B0B5B64D09830E6B432A65E4563A /* WXApi.h */,
+				BD4EBCC47289E0A3A573B5CAD9A40FE6 /* WXApiObject.h */,
+				C9EE1F6CE284ED600A8312E7ECDA22D9 /* Frameworks */,
+			);
+			name = WeChat_SDK_iOS;
+			path = WeChat_SDK_iOS;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5BD2A350C350E0D02E53D42E6DAB270 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEEE5C4350E3B8926F882626B9F5D99C /* libLeoPayManager.a */,
+				39889BA8554C5F3258D3EB76FB3AA52A /* libPods-LeoPayManagerDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9EE1F6CE284ED600A8312E7ECDA22D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29184F701BC299CABB3A4BF293757950 /* libWeChatSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6FCF2C8A52CA6AD5330CBFBAA7B20EE /* LeoPayManager */ = {
+			isa = PBXGroup;
+			children = (
+				7149CC2CA746BD90CE7FC2586825FC8A /* LeoPayManager.h */,
+				6F8FC886A2CEE6571E0BC08790E0503B /* LeoPayManager.m */,
+				476065306306AF11D2180A8459691360 /* Support Files */,
+			);
+			name = LeoPayManager;
+			path = LeoPayManager;
+			sourceTree = "<group>";
+		};
+		E78E4FA918D5EC4B5527AE4EB8412862 /* UnionPay_SDK_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				83419E5CC6AEEA43013F381ED0FCC8AC /* UPPaymentControl.h */,
+				61DB4169DC4E5443E71B35893C2241E3 /* Frameworks */,
+			);
+			name = UnionPay_SDK_iOS;
+			path = UnionPay_SDK_iOS;
+			sourceTree = "<group>";
+		};
+		F5736DE2A666EB662C70657F62C380FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC35CC4103AF1192110113B17E5071C3 /* AlipaySDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		42F3E0743F0B89875F0BD7CB993139AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A061444C66756B5A2E543610089DFB62 /* LeoPayManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1110A1A20EEE012ADE87307829C76CBC /* Pods-LeoPayManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31FD65964C8F29202C0540D8FF98154 /* Build configuration list for PBXNativeTarget "Pods-LeoPayManagerDemo" */;
+			buildPhases = (
+				02ADA947964C8144E4CE19345937F382 /* Sources */,
+				11ACBA8E2995777F368026727FE9CA19 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C84439CA5D7E2E5822475F87DDE0D1C9 /* PBXTargetDependency */,
+			);
+			name = "Pods-LeoPayManagerDemo";
+			productName = "Pods-LeoPayManagerDemo";
+			productReference = 39889BA8554C5F3258D3EB76FB3AA52A /* libPods-LeoPayManagerDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB5B6F921C52D73C2FC29FF25C0F4B75 /* LeoPayManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60C9E35646008493F70E87D3B92EA583 /* Build configuration list for PBXNativeTarget "LeoPayManager" */;
+			buildPhases = (
+				4AFC90118F38D370EF16D219706B8E69 /* Sources */,
+				AC3019E473BB74C6C46BB4E144EB1151 /* Frameworks */,
+				42F3E0743F0B89875F0BD7CB993139AC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeoPayManager;
+			productName = LeoPayManager;
+			productReference = DEEE5C4350E3B8926F882626B9F5D99C /* libLeoPayManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C5BD2A350C350E0D02E53D42E6DAB270 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB5B6F921C52D73C2FC29FF25C0F4B75 /* LeoPayManager */,
+				1110A1A20EEE012ADE87307829C76CBC /* Pods-LeoPayManagerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02ADA947964C8144E4CE19345937F382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FF5DEF7FAD55078A9FFE9B4B7E89F4 /* Pods-LeoPayManagerDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AFC90118F38D370EF16D219706B8E69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482ADEF74BA1A8E0A390210F1B21752C /* LeoPayManager-dummy.m in Sources */,
+				9962FCF63ED84DA37D8A989F1C736A42 /* LeoPayManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C84439CA5D7E2E5822475F87DDE0D1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LeoPayManager;
+			target = EB5B6F921C52D73C2FC29FF25C0F4B75 /* LeoPayManager */;
+			targetProxy = 3B3ECAF7205CAA67AA4E8FF34FE2951F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1F4DC182D48461342C2E705A8827AAAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA457DE434D6601DA1328F1069A7F6A /* LeoPayManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LeoPayManager/LeoPayManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2525D2C64C313B808D946A89A1A66C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04A14129429288F359EA171B7C9DA48 /* Pods-LeoPayManagerDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3060CB52B239458CE4DACC05A2E6CF00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA457DE434D6601DA1328F1069A7F6A /* LeoPayManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LeoPayManager/LeoPayManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB82283F557313298BE500E9B2082244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3647622E75CC8AD5418F97F0CD09B1A /* Pods-LeoPayManagerDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60C9E35646008493F70E87D3B92EA583 /* Build configuration list for PBXNativeTarget "LeoPayManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3060CB52B239458CE4DACC05A2E6CF00 /* Debug */,
+				1F4DC182D48461342C2E705A8827AAAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31FD65964C8F29202C0540D8FF98154 /* Build configuration list for PBXNativeTarget "Pods-LeoPayManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2525D2C64C313B808D946A89A1A66C9F /* Debug */,
+				BB82283F557313298BE500E9B2082244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
