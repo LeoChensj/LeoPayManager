@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "LLPaySdk.h"
+
 #import "WXApi.h"
 #import "WechatAuthSDK.h"
 
@@ -22,15 +24,64 @@
  0    -    支付成功
  -1   -    支付失败
  -2   -    支付取消
- -3   -    未安装App（适用于微信）
+ -3   -    未安装App(适用于微信)
+ -4   -    设备或系统不支持，或者用户未绑卡(适用于ApplePay)
  -99  -    未知错误
  */
 typedef void (^LeoPayManagerRespBlock)(NSInteger respCode, NSString *respMsg);
 
 
-@interface LeoPayManager : NSObject <WXApiDelegate>
+/*
+ ApplePay设备和系统支持状态
+ */
+typedef NS_ENUM(NSInteger, LeoApplePaySupportStatus)
+{
+    kLeoApplePaySupport,                    //完全支持
+    kLeoApplePayDeviceOrVersionNotSupport,  //设备或系统不支持
+    kLeoApplePaySupportNotBindCard,         //设备和系统支持，用户未绑卡
+    kLeoApplePayUnknown                     //未知状态
+};
+
+
+
+@interface LeoPayManager : NSObject <LLPaySdkDelegate, WXApiDelegate>
 
 + (LeoPayManager *)getInstance;
+
+
+
+
+
+
+//***************Apple Pay*****************//
+
+/*
+ Apple Pay支付结果回调
+ */
+@property (nonatomic, strong)LeoPayManagerRespBlock applePayRespBlock;
+
+/*
+ 是否支持Apple Pay
+ 判断返回的枚举类型
+ */
++ (LeoApplePaySupportStatus)isCanApplePay;
+
+/*
+ 跳转wallet系统app进行绑卡
+ */
++ (void)showWalletToBindCard;
+
+/*
+ 发起Apple Pay支付
+ */
+- (void)applePayWithTraderInfo:(NSDictionary *)traderInfo
+           viewController:(UIViewController *)viewController
+                respBlock:(LeoPayManagerRespBlock)block;
+
+
+
+
+
 
 
 //***************微信*****************//
@@ -48,7 +99,8 @@ typedef void (^LeoPayManagerRespBlock)(NSInteger respCode, NSString *respMsg);
 /*
  注册微信appId
  */
-+ (BOOL)wechatRegisterAppWithAppId:(NSString *)appId description:(NSString *)description;
++ (BOOL)wechatRegisterAppWithAppId:(NSString *)appId
+                       description:(NSString *)description;
 
 /*
  处理微信通过URL启动App时传递回来的数据
@@ -58,12 +110,17 @@ typedef void (^LeoPayManagerRespBlock)(NSInteger respCode, NSString *respMsg);
 /*
  发起微信支付
  */
-- (void)wechatPayWithAppId:(NSString *)appId partnerId:(NSString *)partnerId prepayId:(NSString *)prepayId package:(NSString *)package nonceStr:(NSString *)nonceStr timeStamp:(NSString *)timeStamp sign:(NSString *)sign;
+- (void)wechatPayWithAppId:(NSString *)appId
+                 partnerId:(NSString *)partnerId
+                  prepayId:(NSString *)prepayId
+                   package:(NSString *)package
+                  nonceStr:(NSString *)nonceStr
+                 timeStamp:(NSString *)timeStamp
+                      sign:(NSString *)sign
+                 respBlock:(LeoPayManagerRespBlock)block;
 
-/*
- 添加微信支付结果回调
- */
-- (void)addWechatPayRespBlock:(LeoPayManagerRespBlock)block;
+
+
 
 
 
@@ -84,12 +141,13 @@ typedef void (^LeoPayManagerRespBlock)(NSInteger respCode, NSString *respMsg);
 /*
   发起支付宝支付
  */
-- (void)payOrder:(NSString *)order scheme:(NSString *)scheme;
+- (void)aliPayOrder:(NSString *)order
+             scheme:(NSString *)scheme
+          respBlock:(LeoPayManagerRespBlock)block;
 
-/*
- 添加支付宝支付结果回调
- */
-- (void)addAliPayRespBlock:(LeoPayManagerRespBlock)block;
+
+
+
 
 
 
@@ -108,12 +166,9 @@ typedef void (^LeoPayManagerRespBlock)(NSInteger respCode, NSString *respMsg);
 /*
  发起银联支付
  */
-- (void)unionPayWithSerialNo:(NSString *)serialNo viewController:(id)viewController;
-
-/*
- 添加银联支付结果回调
- */
-- (void)addUnionPayRespBlock:(LeoPayManagerRespBlock)block;
+- (void)unionPayWithSerialNo:(NSString *)serialNo
+              viewController:(id)viewController
+                   respBlock:(LeoPayManagerRespBlock)block;
 
 
 @end

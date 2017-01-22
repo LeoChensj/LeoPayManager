@@ -14,6 +14,7 @@
 		7B397BAE1E07F2C700D69B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B397BAC1E07F2C700D69B3B /* Main.storyboard */; };
 		7B397BB01E07F2C700D69B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B397BAF1E07F2C700D69B3B /* Assets.xcassets */; };
 		7B397BB31E07F2C700D69B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B397BB11E07F2C700D69B3B /* LaunchScreen.storyboard */; };
+		7BD8C19C1E136CD500C9CA54 /* LeoPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD8C19B1E136CD500C9CA54 /* LeoPayManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		7B397BAF1E07F2C700D69B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B397BB21E07F2C700D69B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B397BB41E07F2C700D69B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD8C19A1E136CD500C9CA54 /* LeoPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeoPayManager.h; sourceTree = "<group>"; };
+		7BD8C19B1E136CD500C9CA54 /* LeoPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeoPayManager.m; sourceTree = "<group>"; };
 		883FBD9DA4FC7B195EFC13CC /* libPods-LeoPayManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeoPayManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65BD8141AFD1CC89BCA5C0C /* Pods-LeoPayManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoPayManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeoPayManagerDemo/Pods-LeoPayManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +67,7 @@
 		7B397B971E07F2C700D69B3B = {
 			isa = PBXGroup;
 			children = (
+				7BD8C1991E136CD500C9CA54 /* LeoPayManager */,
 				7B397BA21E07F2C700D69B3B /* LeoPayManagerDemo */,
 				7B397BA11E07F2C700D69B3B /* Products */,
 				4748EEFDC3C3CBA253DECEC2 /* Pods */,
@@ -101,6 +105,16 @@
 				7B397BA41E07F2C700D69B3B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BD8C1991E136CD500C9CA54 /* LeoPayManager */ = {
+			isa = PBXGroup;
+			children = (
+				7BD8C19A1E136CD500C9CA54 /* LeoPayManager.h */,
+				7BD8C19B1E136CD500C9CA54 /* LeoPayManager.m */,
+			);
+			name = LeoPayManager;
+			path = ../LeoPayManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,7 @@
 				7B397BAB1E07F2C700D69B3B /* ViewController.m in Sources */,
 				7B397BA81E07F2C700D69B3B /* AppDelegate.m in Sources */,
 				7B397BA51E07F2C700D69B3B /* main.m in Sources */,
+				7BD8C19C1E136CD500C9CA54 /* LeoPayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +368,15 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Alipay_SDK_iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/ApplePay_SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/UnionPay_SDK_iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/WeChat_SDK_iOS\"",
+					"$(PROJECT_DIR)/../LeoPayManager",
+				);
 				INFOPLIST_FILE = LeoPayManagerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -370,6 +394,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Alipay_SDK_iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/ApplePay_SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/UnionPay_SDK_iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/WeChat_SDK_iOS\"",
+					"$(PROJECT_DIR)/../LeoPayManager",
 				);
 				INFOPLIST_FILE = LeoPayManagerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

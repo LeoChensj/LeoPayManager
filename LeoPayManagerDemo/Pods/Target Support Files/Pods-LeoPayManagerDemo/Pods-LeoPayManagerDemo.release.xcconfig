@@ -1,9 +1,9 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Alipay_SDK_iOS/Alipay"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Alipay_SDK_iOS" "${PODS_ROOT}/Headers/Public/LeoPayManager" "${PODS_ROOT}/Headers/Public/UnionPay_SDK_iOS" "${PODS_ROOT}/Headers/Public/WeChat_SDK_iOS"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/LeoPayManager" $(inherited) "${PODS_ROOT}/UnionPay_SDK_iOS/UnionPay" $(inherited) "${PODS_ROOT}/WeChat_SDK_iOS/OpenSDK"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Alipay_SDK_iOS" -isystem "${PODS_ROOT}/Headers/Public/LeoPayManager" -isystem "${PODS_ROOT}/Headers/Public/UnionPay_SDK_iOS" -isystem "${PODS_ROOT}/Headers/Public/WeChat_SDK_iOS"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"LeoPayManager" -l"PaymentControl" -l"WeChatSDK" -l"c++" -l"sqlite3.0" -l"stdc++" -l"z" -framework "AlipaySDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreMotion" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Alipay_SDK_iOS" "${PODS_ROOT}/Headers/Public/ApplePay_SDK" "${PODS_ROOT}/Headers/Public/UnionPay_SDK_iOS" "${PODS_ROOT}/Headers/Public/WeChat_SDK_iOS"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ApplePay_SDK/ApplePay" $(inherited) "${PODS_ROOT}/UnionPay_SDK_iOS/UnionPay" $(inherited) "${PODS_ROOT}/WeChat_SDK_iOS/OpenSDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Alipay_SDK_iOS" -isystem "${PODS_ROOT}/Headers/Public/ApplePay_SDK" -isystem "${PODS_ROOT}/Headers/Public/UnionPay_SDK_iOS" -isystem "${PODS_ROOT}/Headers/Public/WeChat_SDK_iOS"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"PaySdkColor" -l"PaymentControl" -l"RsaCrypto" -l"WeChatSDK" -l"c++" -l"sqlite3.0" -l"stdc++" -l"z" -framework "AlipaySDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreMotion" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "MobileCoreServices" -framework "PassKit" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

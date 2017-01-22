@@ -1,21 +1,21 @@
 PODS:
   - Alipay_SDK_iOS (15.2.0.1)
-  - LeoPayManager (0.9.0):
-    - Alipay_SDK_iOS
-    - UnionPay_SDK_iOS
-    - WeChat_SDK_iOS
-  - UnionPay_SDK_iOS (3.0.0.1)
+  - ApplePay_SDK (2.6.3.1)
+  - UnionPay_SDK_iOS (3.0.0.2)
   - WeChat_SDK_iOS (1.7.5.3)
 
 DEPENDENCIES:
-  - LeoPayManager
+  - Alipay_SDK_iOS
+  - ApplePay_SDK
+  - UnionPay_SDK_iOS
+  - WeChat_SDK_iOS
 
 SPEC CHECKSUMS:
   Alipay_SDK_iOS: ae708b2c97779b51d812021e34f61b1ddf77ade0
-  LeoPayManager: fb9144e69edf95670b29b651d6723f365d990dcb
-  UnionPay_SDK_iOS: 4dc1c9b8840465edbb2ecefba45bb1e85717c5ce
+  ApplePay_SDK: 1c8f6012fa0b12e73bd03659869d12ab1936c6bd
+  UnionPay_SDK_iOS: c7ea6fa2127bda61309f866a49d9ab4ac5ff2961
   WeChat_SDK_iOS: 7a9e224f68c41f456787aeb3ed77f10bb4447d12
 
-PODFILE CHECKSUM: bb5b3b5d1d1a7fcb4ba8e01f6571dd2ae31de343
+PODFILE CHECKSUM: 34371485fb4de46a8e79d1c62e95e9c249f92a85
 
 COCOAPODS: 1.2.0.beta.1

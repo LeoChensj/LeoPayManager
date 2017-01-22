@@ -26,6 +26,127 @@
 
 
 
+//Apple Pay
++ (LeoApplePaySupportStatus)isCanApplePay;
+{
+    LLAPPaySupportStatus status = [LLAPPaySDK canDeviceSupportApplePayPayments];
+    
+    if(status==kLLAPPayDeviceSupport)
+    {
+        return kLeoApplePaySupport;
+    }
+    else if(status==kLLAPPayDeviceNotSupport || status==kLLAPPayDeviceVersionTooLow)
+    {
+        return kLeoApplePayDeviceOrVersionNotSupport;
+    }
+    else if(status==kLLAPPayDeviceNotBindChinaUnionPayCard)
+    {
+        return kLeoApplePaySupportNotBindCard;
+    }
+    
+    return kLeoApplePayUnknown;
+}
+
++ (void)showWalletToBindCard
+{
+    [LLAPPaySDK showWalletToBindCard];
+}
+
+- (void)applePayWithTraderInfo:(NSDictionary *)traderInfo
+           viewController:(UIViewController *)viewController
+                respBlock:(LeoPayManagerRespBlock)block
+{
+    self.applePayRespBlock = block;
+    
+    if([LeoPayManager isCanApplePay]==kLeoApplePaySupport)
+    {
+        LLAPPaySDK *llAPPaySDK = [LLAPPaySDK sharedSdk];
+        llAPPaySDK.sdkDelegate = self;
+        
+        [llAPPaySDK payWithTraderInfo:traderInfo inViewController:viewController];
+    }
+    else
+    {
+        if(self.applePayRespBlock)
+        {
+            self.applePayRespBlock(-4, @"设备或系统不支持，或者用户未绑卡");
+        }
+    }
+}
+
+#pragma mark - LLPaySdkDelegate
+- (void)paymentEnd:(LLPayResult)resultCode withResultDic:(NSDictionary*)dic
+{
+    NSString *msg;
+    
+    switch (resultCode)
+    {
+        case kLLPayResultSuccess:
+        {
+            msg = @"支付成功";
+            
+            NSString* result_pay = dic[@"result_pay"];
+            if ([result_pay isEqualToString:@"SUCCESS"])
+            {
+                if(self.applePayRespBlock)
+                {
+                    self.applePayRespBlock(0, @"支付成功");
+                }
+            }
+            else
+            {
+                if(self.applePayRespBlock)
+                {
+                    self.applePayRespBlock(-1, @"支付失败");
+                }
+            }
+        }
+            break;
+        case kLLPayResultFail:
+        {
+            if(self.applePayRespBlock)
+            {
+                self.applePayRespBlock(-1, @"支付失败");
+            }
+        }
+            break;
+        case kLLPayResultCancel:
+        {
+            if(self.applePayRespBlock)
+            {
+                self.applePayRespBlock(-2, @"支付取消");
+            }
+        }
+            break;
+        case kLLPayResultInitError:
+        {
+            if(self.applePayRespBlock)
+            {
+                self.applePayRespBlock(-1, @"支付失败");
+            }
+        }
+            break;
+        case kLLPayResultInitParamError:
+        {
+            if(self.applePayRespBlock)
+            {
+                self.applePayRespBlock(-1, @"支付失败");
+            }
+        }
+            break;
+        default:
+        {
+            if(self.applePayRespBlock)
+            {
+                self.applePayRespBlock(-99, @"未知错误");
+            }
+        }
+            break;
+    }
+}
+//Apple Pay
+
+
 //微信
 + (BOOL)isWXAppInstalled
 {
@@ -39,8 +160,10 @@
 {
     return [WXApi handleOpenURL:url delegate:[LeoPayManager getInstance]];
 }
-- (void)wechatPayWithAppId:(NSString *)appId partnerId:(NSString *)partnerId prepayId:(NSString *)prepayId package:(NSString *)package nonceStr:(NSString *)nonceStr timeStamp:(NSString *)timeStamp sign:(NSString *)sign
+- (void)wechatPayWithAppId:(NSString *)appId partnerId:(NSString *)partnerId prepayId:(NSString *)prepayId package:(NSString *)package nonceStr:(NSString *)nonceStr timeStamp:(NSString *)timeStamp sign:(NSString *)sign respBlock:(LeoPayManagerRespBlock)block
 {
+    self.wechatRespBlock = block;
+    
     if([WXApi isWXAppInstalled])
     {
         PayReq *req = [[PayReq alloc] init];
@@ -55,16 +178,13 @@
     }
     else
     {
-        if(_wechatRespBlock)
+        if(self.wechatRespBlock)
         {
-            _wechatRespBlock(-3, @"未安装微信");
+            self.wechatRespBlock(-3, @"未安装微信");
         }
     }
 }
-- (void)addWechatPayRespBlock:(LeoPayManagerRespBlock)block
-{
-    _wechatRespBlock = block;
-}
+
 #pragma mark - WXApiDelegate
 - (void)onResp:(BaseResp*)resp
 {
@@ -74,9 +194,9 @@
         {
             case 0:
             {
-                if(_wechatRespBlock)
+                if(self.wechatRespBlock)
                 {
-                    _wechatRespBlock(0, @"支付成功");
+                    self.wechatRespBlock(0, @"支付成功");
                 }
                 
                 NSLog(@"支付成功");
@@ -84,9 +204,9 @@
             }
             case -1:
             {
-                if(_wechatRespBlock)
+                if(self.wechatRespBlock)
                 {
-                    _wechatRespBlock(-1, @"支付失败");
+                    self.wechatRespBlock(-1, @"支付失败");
                 }
                 
                 NSLog(@"支付失败");
@@ -94,9 +214,9 @@
             }
             case -2:
             {
-                if(_wechatRespBlock)
+                if(self.wechatRespBlock)
                 {
-                    _wechatRespBlock(-2, @"支付取消");
+                    self.wechatRespBlock(-2, @"支付取消");
                 }
                 
                 NSLog(@"支付取消");
@@ -105,9 +225,9 @@
                 
             default:
             {
-                if(_wechatRespBlock)
+                if(self.wechatRespBlock)
                 {
-                    _wechatRespBlock(-99, @"未知错误");
+                    self.wechatRespBlock(-99, @"未知错误");
                 }
             }
                 break;
@@ -136,11 +256,7 @@
                 manager.alipayRespBlock(0, @"支付成功");
             }
         }
-        else if(code.integerValue==8000)
-        {
-            //正在处理中
-        }
-        else if(code.integerValue==4000)
+        else if(code.integerValue==4000 || code.integerValue==6002)
         {
             if(manager.alipayRespBlock)
             {
@@ -152,13 +268,6 @@
             if(manager.alipayRespBlock)
             {
                 manager.alipayRespBlock(-2, @"支付取消");
-            }
-        }
-        else if(code.integerValue==6002)
-        {
-            if(manager.alipayRespBlock)
-            {
-                manager.alipayRespBlock(-1, @"支付失败");
             }
         }
         else
@@ -173,58 +282,45 @@
     
     return YES;
 }
-- (void)payOrder:(NSString *)order scheme:(NSString *)scheme
+- (void)aliPayOrder:(NSString *)order scheme:(NSString *)scheme respBlock:(LeoPayManagerRespBlock)block
 {
+    self.alipayRespBlock = block;
+    
+    __weak __typeof(&*self)ws = self;
     [[AlipaySDK defaultService] payOrder:order fromScheme:scheme callback:^(NSDictionary *resultDic) {
         
-        LeoPayManager *manager = [LeoPayManager getInstance];
         NSNumber *code = resultDic[@"resultStatus"];
         
         if(code.integerValue==9000)
         {
-            if(manager.alipayRespBlock)
+            if(ws.alipayRespBlock)
             {
-                manager.alipayRespBlock(0, @"支付成功");
+                ws.alipayRespBlock(0, @"支付成功");
             }
         }
-        else if(code.integerValue==8000)
+        else if(code.integerValue==4000 || code.integerValue==6002)
         {
-            //正在处理中
-        }
-        else if(code.integerValue==4000)
-        {
-            if(manager.alipayRespBlock)
+            if(ws.alipayRespBlock)
             {
-                manager.alipayRespBlock(-1, @"支付失败");
+                ws.alipayRespBlock(-1, @"支付失败");
             }
         }
         else if(code.integerValue==6001)
         {
-            if(manager.alipayRespBlock)
+            if(ws.alipayRespBlock)
             {
-                manager.alipayRespBlock(-2, @"支付取消");
-            }
-        }
-        else if(code.integerValue==6002)
-        {
-            if(manager.alipayRespBlock)
-            {
-                manager.alipayRespBlock(-1, @"支付失败");
+                ws.alipayRespBlock(-2, @"支付取消");
             }
         }
         else
         {
-            if(manager.alipayRespBlock)
+            if(ws.alipayRespBlock)
             {
-                manager.alipayRespBlock(-99, @"未知错误");
+                ws.alipayRespBlock(-99, @"未知错误");
             }
         }
         
     }];
-}
-- (void)addAliPayRespBlock:(LeoPayManagerRespBlock)block
-{
-    _alipayRespBlock = block;
 }
 //支付宝
 
@@ -276,15 +372,11 @@
     
     return YES;
 }
-- (void)unionPayWithSerialNo:(NSString *)serialNo viewController:(id)viewController
-{
-    NSString *mode = @"00";
-    
-    [[UPPaymentControl defaultControl] startPay:serialNo fromScheme:@"UnionPay" mode:mode viewController:viewController];
-}
-- (void)addUnionPayRespBlock:(LeoPayManagerRespBlock)block;
+- (void)unionPayWithSerialNo:(NSString *)serialNo viewController:(id)viewController respBlock:(LeoPayManagerRespBlock)block
 {
     _unionRespBlock = block;
+    
+    [[UPPaymentControl defaultControl] startPay:serialNo fromScheme:@"UnionPay" mode:@"00" viewController:viewController];
 }
 //银联
 

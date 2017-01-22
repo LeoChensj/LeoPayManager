@@ -1,4 +1,7 @@
 
 target 'LeoPayManagerDemo' do
-    pod 'LeoPayManager'
+    pod 'ApplePay_SDK'
+    pod 'WeChat_SDK_iOS'
+    pod 'Alipay_SDK_iOS'
+    pod 'UnionPay_SDK_iOS'
 end
