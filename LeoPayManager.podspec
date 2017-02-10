@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LeoPayManager"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "集成主流支付方式"
   s.description  = <<-DESC
                    集成主流支付方式，包括Apple Pay、微信、支付宝、银联
