@@ -55,7 +55,7 @@
 #pragma mark - Button Func
 - (void)ApplePayFunc
 {
-    //先获取支付参数
+    //先获取Apple Pay支付参数
     //...
     
     LeoPayManager *manager = [LeoPayManager getInstance];
@@ -68,7 +68,7 @@
 
 - (void)wechatPayFunc
 {
-    //先获取支付参数
+    //先获取微信支付参数
     //...
     
     LeoPayManager *manager = [LeoPayManager getInstance];
@@ -81,7 +81,7 @@
 
 - (void)aliPayFunc
 {
-    //先获取支付参数
+    //先获取支付宝支付参数
     //...
     
     LeoPayManager *manager = [LeoPayManager getInstance];
@@ -94,7 +94,7 @@
 
 - (void)unionPayFunc
 {
-    //先获取支付参数
+    //先获取银联支付参数
     //...
     
     LeoPayManager *manager = [LeoPayManager getInstance];
